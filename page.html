@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title id="title1">YOLO Dashboard</title>
+	<meta charset="utf-8">
+	<meta name="description" content="My Profile, Dashboard of  my web-app as the name of YOLO">
+	<meta name="keywords" content="Dashboard, DP, Profile, Bio, Personal Details">
+	<meta name="author" content="Abhrojyoti Chatterjee">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@1,500&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.CSS">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+  	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+
+<body class="app-body">
+	<div class="navbar bg-info text-white">
+		<h1 style="font-family: Lucida Handwriting; margin-top: 5px; margin-bottom: 5px;">Yolo</h1>
+		<div style="float: right;">
+			<button id="navbar-button" class="btn btn-primary button-text-hover" style="margin-right: 10px;" onclick = "loadNewPage()"><h5 id="navbar-button-h5" class="font-Azeret_Mono">Profile</h5></button>
+			
+			<button class="btn btn-primary button-text-hover" style="margin-right: 10px;" onclick="window.open('CV.html','_blank')"><h5 class="font-Azeret_Mono">CV</h5></button>
+			
+			<button class="btn btn-danger button-text-hover" style="margin-right: 25px;" onclick="logout()"><h5 class="font-Azeret_Mono">Logout</h5></button>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row" style="margin-top: 50px">
+			<div class="col-lg-7 col-md-7 col-sm-10">
+				<h1 class="large-display text-white text-center font-Dancing_Script">ABHROJYOTI CHATTERJEE</h1>
+				<h1 class="text-success text-center font-Azeret_Mono">A student of MCKV Institute Of Engineering</h1>
+			</div>
+			
+			<div class="col-lg-1 col-md-1 col-sm-2"></div><!-- For style adjustment -->
+			
+			<div class="col-lg-4 col-md-4 col-sm-12">
+				<div class="card">
+					<div class="card-body">
+						<img src="image/profile.jpg" class="card-img-top">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="container-2nd-row" style="margin-top: 60px; margin-bottom: 40px">
+			<div class="col-lg-2 col-md-4 col-sm-6" style="padding: 10px;">
+				<div class="card bg-primary">
+					<a href="details.html?page=Education" class="clickable-card">
+						<img src="https://toppng.com/uploads/preview/background-education-logo-for-education-a-11563058486g8lcjy4wvq.png" class="card-img-top card-img-height" alt="Card image cap">
+						<div class="card-body">
+							<h6 class="text-center text-white font-Azeret_Mono">Education</h6>
+						</div>
+					</a>
+				</div>
+			</div>
+			
+			<div class="col-lg-2 col-md-4 col-sm-6" style="padding: 10px;">
+				<div class="card bg-primary">
+					<a href="details.html?page=Experience" class="clickable-card">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGEa5JGauD7Bc5BKx0xXZPFyMvklMxZ3k-AA&usqp=CAU" class="card-img-top card-img-height" alt="Card image cap">
+						<div class="card-body">
+							<h6 class="text-center text-white font-Azeret_Mono" style="margin-top: 3px;">Experience</h6>
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="col-lg-2 col-md-4 col-sm-6" style="padding: 10px">
+				<div class="card bg-primary">
+					<a href="details.html?page=Training" class="clickable-card">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_GuADXDaeJHmGGNv3hwqCWxFoLfX3Bipx9A&usqp=CAU" class="card-img-top card-img-height" alt="Card image cap">
+						<div class="card-body">
+							<h6 class="text-center text-white font-Azeret_Mono" style="margin-top: 3px;">Training</h6>
+						</div>
+					</a>
+				</div>
+			</div>
+			
+			<div class="col-lg-2 col-md-4 col-sm-6" style="padding: 10px">
+				<div class="card bg-primary">
+					<a href="details.html?page=Projects" class="clickable-card">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvK1hov8mtw3cx4a6bqfYcPgrB6p14Qd6COw&usqp=CAU" class="card-img-top card-img-height" alt="Card image cap">
+						<div class="card-body">
+							<h6 class="text-center text-white font-Azeret_Mono">Projects</h6>
+						</div>
+					</a>
+				</div>
+			</div>
+			
+			<div class="col-lg-2 col-md-4 col-sm-6" style="padding: 10px">
+				<div class="card bg-primary">
+					<a href="details.html?page=Extra-Curricular" class="clickable-card">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuCujIFjH7bgY9D4wDb0xtXAjhFKMb6L1BBw&usqp=CAU" class="card-img-top card-img-height" alt="Card image cap">
+						<div class="card-body" style="padding-top: 16px; padding-bottom: 16px;">
+							<h6 class="text-center text-white font-Azeret_Mono" style="margin-bottom: 0px;">Extra-Curricular</h6>
+						</div>
+					</a>
+				</div>
+			</div>
+			
+			<div class="col-lg-2 col-md-4 col-sm-6" style="padding: 10px">
+				<div class="card bg-primary">
+					<a href="details.html?page=Achivements" class="clickable-card">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9wYvafcFBRJolym7Tw7OVUMmUxdKMO03xVA&usqp=CAU" class="card-img-top card-img-height" alt="Card image cap">
+						<div class="card-body">
+							<h6 class="text-center text-white font-Azeret_Mono" style="margin-top: 3px;">Achivements</h6>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="app.js"></script>
+	
+	<script type="text/javascript">
+		let page_name = location.href.split(".html?page=")[1]
+		document.getElementById('title1').innerText = page_name;
+		let hit_url = 'page.html?page=Profile';
+		if (page_name === 'Profile'){
+			hit_url = 'page.html?page=Dashboard';
+			document.getElementById('navbar-button-h5').innerText = "Dashboard";
+			htmlControlFunction(page_name);
+		}else{
+			document.getElementById('container-2nd-row').className = "row";
+		}
+		function loadNewPage(){
+			window.location.href = hit_url;
+		}
+	</script>
+</body>
+</html>
